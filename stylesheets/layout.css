@@ -1,8 +1,12 @@
-body {
+  /* общие стили для страницы */
+ body {
     background-color: rgb(255, 255, 255);
 }
 * {
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: "PT Sans", sans-serif;
@@ -108,3 +112,119 @@ blockquote::before {
 
 }
 
+/* стили для бокового меню */
+.sidebar {
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 50px;
+  opacity: 0.3;
+  transition: all ease 0.3s;
+}
+.sidebar:hover {
+opacity: 1;
+transition: all ease 0.6s;
+}
+.sidebar ol ol {
+  color: rgba(0, 0, 0, 0.4);
+}
+.sidebar ol {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  font-size: 15px;
+}
+.sidebar li {
+ line-height: 100%;
+}
+.sidebar a {
+  text-decoration: none;
+}
+/* стили для верхнего меню */
+.menubar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  top: 0;
+  left: 0;
+
+}
+.menubar img {
+width: 350px;
+margin: 0;
+}
+.menubar a {
+text-decoration: none;
+color: rgba(0, 0, 0, 0.4);
+transition: all ease 0.6s;
+}
+.menubar a:hover {
+  color: black;
+  transition: all ease 0.6s;
+}
+/* стили для about.html */
+.about::before {
+  content: "";
+  width: 1440px;
+  height: 3120px;
+  position: absolute;
+  top: 0;
+  left: calc(50%-720px) ;
+  background-image: url('../images/1440.png'); 
+  opacity: 0;
+}
+.about {
+  overflow-x: hidden;
+}
+.about section {
+  display: flex;
+  width: 1440px;
+  justify-content: space-between;
+  margin:s 0 auto;
+}
+.about section div {
+  width: 48%;
+}
+.about h2 {
+  font-weight: 400;
+  width: 100%;
+  font-size: 38px;
+  line-height: 46px;
+  margin: 0;
+}
+.about p {
+ width: 100%;
+  font-size: 26px;
+  line-height: 36px;
+  margin: 26px 0;
+}
+.about div:nth-of-type(2) img {
+  width: 1100px;
+}
+.about div:nth-of-type(1) img {
+  width: 700px;
+}
+#firstSection {
+  margin-top: 138px;
+}
+#firstSection div:nth-of-type(1) {
+  padding: 40px 0 0 168px;
+}
+#secondSection {
+  margin-top: 90px;
+}
+#secondSection div:nth-of-type(2) {
+  padding: 60px 60px 0 10px; 
+}
+#thirdSection div:nth-of-type(1) {
+  padding: 10px 0 0 168px;
+}
+#thirdSection img {
+  border-left: 1px solid #eee;
+}
+#thirdSection img {
+  border-bottom: 1px solid #eee;
+}
